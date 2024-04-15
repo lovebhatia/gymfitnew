@@ -12,7 +12,7 @@ import com.example.gymfitnew.dto.GymUserDto;
 import com.example.gymfitnew.dto.JwtAuthResponse;
 import com.example.gymfitnew.dto.LoginDto;
 import com.example.gymfitnew.dto.RefreshAccessTokenRequest;
-import com.example.gymfitnew.model.GymRoles;
+import com.example.gymfitnew.entity.GymRoles;
 import com.example.gymfitnew.repository.GymRoleRepository;
 import com.example.gymfitnew.securityConfig.CustomUserDetailsService;
 import com.example.gymfitnew.service.AuthService;

@@ -1,4 +1,4 @@
-package com.example.gymfitnew.model;
+package com.example.gymfitnew.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

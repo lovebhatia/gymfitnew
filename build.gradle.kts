@@ -7,9 +7,7 @@ plugins {
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
-java {
-	sourceCompatibility = JavaVersion.VERSION_17
-}
+
 
 configurations {
 	compileOnly {
@@ -21,6 +19,8 @@ repositories {
 	mavenCentral()
 }
 
+
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
@@ -29,6 +29,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-jersey")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 	implementation("io.jsonwebtoken:jjwt:0.12.5")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -38,6 +39,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.springframework.security:spring-security-test")
+}
+
+jar {
+    enabled = true
 }
 
 tasks.withType<Test> {

@@ -1,4 +1,4 @@
-package com.example.gymfitnew.model;
+package com.example.gymfitnew.entity;
 
 import java.util.Date;
 
@@ -19,18 +19,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserActivity {
+public class BMIRecord {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
-    @ManyToOne
+	
+	@ManyToOne
     @JoinColumn(name = "user_id")
     private GymUser user;
-    
-    private String activity;
-    
 	@Column(name = "created_At", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date date;
+    private String sex;
+    private Double height;
+    private Double weight;
+    private Integer age;
+    private Double bmi;
 
 }

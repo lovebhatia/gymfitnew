@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.gymfitnew.dto.GymUserDto;
-import com.example.gymfitnew.model.GymUser;
+import com.example.gymfitnew.entity.GymUser;
 import com.example.gymfitnew.repository.GymUserRepository;
 
 import lombok.AllArgsConstructor;

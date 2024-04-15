@@ -2,7 +2,7 @@ package com.example.gymfitnew.dto;
 
 import java.util.Set;
 
-import com.example.gymfitnew.model.GymRoles;
+import com.example.gymfitnew.entity.GymRoles;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

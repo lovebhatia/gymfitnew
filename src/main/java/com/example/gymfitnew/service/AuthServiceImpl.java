@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.gymfitnew.dto.JwtAuthResponse;
 import com.example.gymfitnew.dto.LoginDto;
-import com.example.gymfitnew.model.GymRefreshToken;
+import com.example.gymfitnew.entity.GymRefreshToken;
 import com.example.gymfitnew.repository.GymRefreshTokenRepository;
 import com.example.gymfitnew.repository.GymUserRepository;
 import com.example.gymfitnew.securityConfig.CustomUserDetailsService;

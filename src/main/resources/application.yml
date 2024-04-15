@@ -1,0 +1,28 @@
+jwt:
+  authorities:
+    key: roles
+  expiration: 86400000
+  header:
+    string: Authorization
+  refreshExpiration: 9000000
+  secret: gymfitappsecraw2873219
+  signing:
+    key: signingkey
+  token:
+    prefix: 'Bearer '
+server:
+  port: ${PORT:8086}
+spring:
+  application:
+    name: gymfitnew
+  datasource:
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/gym_fit?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true

@@ -1,10 +1,9 @@
-package com.example.gymfitnew.model;
+package com.example.gymfitnew.entity;
 
 import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,21 +15,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class ExerciseTypes {
+public class UserActivity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String exerciseTypeName;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private GymUser user;
+    
+    private String activity;
+    
 	@Column(name = "created_At", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-	private Date createdTime;
-	private String gifName;
-	private String setRange;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "body_part_id")
-	private BodyPart bodyPart;
-	
+    private Date date;
+
 }

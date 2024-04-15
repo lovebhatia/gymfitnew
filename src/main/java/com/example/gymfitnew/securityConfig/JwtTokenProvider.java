@@ -24,7 +24,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.example.gymfitnew.model.GymUser;
+import com.example.gymfitnew.entity.GymUser;
 import com.example.gymfitnew.repository.GymRefreshTokenRepository;
 import com.example.gymfitnew.repository.GymUserRepository;
 

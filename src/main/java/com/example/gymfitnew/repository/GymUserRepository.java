@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Repository;
 
-import com.example.gymfitnew.model.GymUser;
+import com.example.gymfitnew.entity.GymUser;
 
 @Repository
 public interface GymUserRepository extends JpaRepository<GymUser, Long> {

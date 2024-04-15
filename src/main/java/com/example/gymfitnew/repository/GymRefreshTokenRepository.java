@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.gymfitnew.model.GymRefreshToken;
-import com.example.gymfitnew.model.GymUser;
+import com.example.gymfitnew.entity.GymRefreshToken;
+import com.example.gymfitnew.entity.GymUser;
 
 @Repository
 public interface GymRefreshTokenRepository extends JpaRepository<GymRefreshToken, Long> {

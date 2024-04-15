@@ -1,9 +1,6 @@
-package com.example.gymfitnew.model;
+package com.example.gymfitnew.entity;
 
-import java.time.LocalDateTime;
 import java.util.Date;
-
-import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,21 +15,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class WorkoutPerUser {
+public class ExeriseSet {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private GymUser gymUser;
+	@JoinColumn(name = "exerise_per_workout_per_user_id")
+	private ExercisePerWorkoutPerUser exercisePerWorkoutPerUser;
 	
-	private String workoutName;
-	@CreationTimestamp
-    private LocalDateTime createdAt;
-
+	private Integer reps;
+	private Double Weight;
+	@Column(name = "created_At", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	private Date createdTime;
+	
 }
